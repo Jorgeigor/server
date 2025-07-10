@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "_version": "22.0.0",
   "compilerOptions": {
+    // ... suas outras opções
     "lib": [
       "es2024",
       "ESNext.Array",
@@ -17,5 +18,9 @@
     "skipLibCheck": true,
     "moduleResolution": "node16",
     "strictNullChecks": true
-  }
+  },
+  "include": [
+    "src/**/*.ts", 
+    "src/**/*.d.ts" 
+  ]
 }

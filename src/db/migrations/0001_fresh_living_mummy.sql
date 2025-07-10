@@ -3,6 +3,7 @@ CREATE TABLE "questions" (
 	"room_id" uuid NOT NULL,
 	"questions" text NOT NULL,
 	"description" text,
+	"answer" text,
 	"created_at" timestamp DEFAULT now() NOT NULL
 );
 --> statement-breakpoint

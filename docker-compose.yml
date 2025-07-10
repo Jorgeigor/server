@@ -1,11 +1,15 @@
 services:
-  nlw-agents-pg:
+  nlw-agents-pg: # Mantenha este nome, pois é o nome do seu serviço
     image: pgvector/pgvector:pg17
     environment:
       POSTGRES_USER: docker
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: agents
     ports:
-    - "5432:5432"
+      - "5432:5432"
     volumes:
-    - "./docker/setup.sql:/docker-entrypoint-initdb.d/setup.sql"
+      - "./docker/setup.sql:/docker-entrypoint-initdb.d/setup.sql"
+      - pg_data:/var/lib/postgresql/data # <--- Adicione ou verifique esta linha
+                                          # Ela cria um volume persistente para os dados
+volumes: # <--- Adicione esta seção no final do arquivo docker-compose.yml
+  pg_data:
