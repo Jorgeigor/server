@@ -1,6 +1,6 @@
 # NLW Agents
 
-Projeto desenvolvido durante um evento da **Rocketseat** utilizando tecnologias modernas para criação de uma API robusta e eficiente.
+O NLW Agents é uma aplicação que permite a interação em "salas" onde conversas de áudio são gravadas e transcritas. A principal funcionalidade é transformar essas transcrições de áudio em um contexto para um modelo de inteligência artificial, que então pode responder a perguntas feitas pelos usuários com base nesse conteúdo. Ele também lida com o armazenamento dessas transcrições e perguntas no banco de dados.
 
 ## 🚀 Tecnologias
 
@@ -27,6 +27,7 @@ O projeto segue uma arquitetura modular com:
 
 - Node.js (versão com suporte a `--experimental-strip-types`)
 - Docker e Docker Compose
+- Acesse o Frontend para ver as intruções e clone o reositório ```https://github.com/Jorgeigor/NLW-Agents.git```
 
 ### 1. Clone o repositório
 ```bash
@@ -89,5 +90,3 @@ A API estará disponível em `http://localhost:3333`
 - `GET /rooms` - Lista as salas disponíveis
 
 ---
-
-Desenvolvido com ❤️ durante o NLW da Rocketseat 

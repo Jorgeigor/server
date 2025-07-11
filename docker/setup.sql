@@ -1,12 +1,12 @@
 -- ./docker/setup.sql
 
-CREATE EXTENSION IF NOT EXISTS vector; -- Garante que a extensão pgvector esteja ativada
+CREATE EXTENSION IF NOT EXISTS vector; 
 
 CREATE TABLE IF NOT EXISTS audio_chunks (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(), -- Usa UUIDs gerados pelo DB
-    room_id TEXT NOT NULL, -- Altere para UUID se sua room_id for um UUID
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(), 
+    room_id TEXT NOT NULL, 
     transcription TEXT,
-    embeddings VECTOR(768), -- O tipo para embeddings, dimensão 768
+    embeddings VECTOR(768), 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
